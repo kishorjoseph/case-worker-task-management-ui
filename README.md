@@ -1,69 +1,44 @@
-# React + TypeScript + Vite
+# React + TypeScript + Vite  installation and running instructions
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Overview Case management system UI is a React TypeScript  application built with the latest version of React that demonstrates basic Task management functionality (CRUD). Developed by following a TDD strategy The application allows users to:
 
-Currently, two official plugins are available:
+Create new Task
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Delete a task
 
-## Expanding the ESLint configuration
+Upadate a task (Patch operation)
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+Get all the tasks
 
-```js
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+Prerequisites Before running the application, ensure you have:
 
-      // Remove tseslint.configs.recommended and replace with this
-      ...tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      ...tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      ...tseslint.configs.stylisticTypeChecked,
+Node.js (v16 or higher recommended)
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+npm or yarn package manager
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+Java JDK (for Spring Boot backend)
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+Running Spring Boot server (localhost:8081)  - CURRENTLY PROXIED FROM UI
 
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+Installation
+
+git clone [repository-url] cd case-worker-task-management-system
+
+Install dependencies: npm install
+
+3.Running the Application Start your Spring Boot application: CD to the Task API App mvn spring-boot:run
+
+** Note - **(Ensure it's running on http://localhost:8081) if not UI proxy (vite-config.js) has to be updated to point to correct server port
+
+4.Start the React development server:
+
+npm run dev
+
+http://localhost:5173/
+
+Operations - CRUD
+
+
+To run all the test -   npm run test.
+
+Happy coding.
