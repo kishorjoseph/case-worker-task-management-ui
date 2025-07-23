@@ -2,6 +2,19 @@
 
 Overview Case management system UI is a React TypeScript  application built with the latest version of React that demonstrates basic Task management functionality (CRUD). Developed by following a TDD strategy The application allows users to:
 
+How it looks
+
+![Application Screenshot](assets/ui.png "Task Manager UI")
+
+
+Features
+
+Responsive Design (For all the devices)
+TDD
+Type Safe
+
+Functionalities Available
+
 Create new Task
 
 Delete a task
